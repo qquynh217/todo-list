@@ -1,0 +1,43 @@
+.todoList {
+    border-top: 1px solid gainsboro;
+    padding-top: 12px;
+    color: darkslategrey;
+    font-size: 16px;
+}
+
+.todoList li {
+    margin: 5px 0;
+}
+
+.todoList li:hover .delTodo {
+    opacity: 1;
+}
+
+.todoList span {
+    cursor: pointer;
+}
+
+.todoList .delTodo {
+    margin-left: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.completed {
+    color: #d1c7f0;
+    text-decoration: line-through;
+}
+
+.input {
+    border-top: 1px solid gainsboro;
+    padding: 0 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input input {
+    margin: 10px 0;
+    font-size: 16px;
+}

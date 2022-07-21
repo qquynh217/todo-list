@@ -1,0 +1,5 @@
+.addTask {
+    width: 200px;
+    cursor: pointer;
+    position: fixed;
+}

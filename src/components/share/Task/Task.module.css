@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@100;300;400&family=Poppins:wght@200;300;500;700&family=Quicksand&family=Roboto:wght@300;400&display=swap');
+
+.task {
+    padding: 0 !important;
+    min-width: 300px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 15px 18px;
+}
+
+.task input {
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.nameTask,
+.task input {
+    /* display: none; */
+    margin-bottom: 10px;
+}
+
+.tools {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: grey;
+}
+
+.toolTab {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toolTab:active * {
+    color: #faaca8;
+}

@@ -2,7 +2,7 @@ import styles from "./TodoList.module.css"
 import { AiOutlineClose } from "react-icons/ai";
 import { BsPlusCircle } from "react-icons/bs";
 import { useStore } from '../../store/hook';
-import { addNewTodo, deleteTodo, setTodoInput, toggleTodo } from "../../store/action";
+import { addNewTodo, deleteTodo, toggleTodo } from "../../store/action";
 import { useState } from "react";
 
 function TodoList({ todoList, indexTask }) {
@@ -32,6 +32,12 @@ function TodoList({ todoList, indexTask }) {
                     placeholder="Enter todo..."
                     value={todoInput}
                     onChange={(e) => { setTodoInput(e.target.value) }}
+                    onKeyDown={(e) => {
+                        if (e.keyCode == 13) {
+                            dispatch(addNewTodo(todoInput, indexTask))
+                            setTodoInput("")
+                        }
+                    }}
                 />
                 <BsPlusCircle
                     fontSize={20}

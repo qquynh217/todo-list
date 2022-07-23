@@ -6,4 +6,6 @@ export const EDIT_TASK = "edit_task"
 export const ADD_NEW_TODO = "add_new_todo"
 export const DELETE_TODO = "delete_todo"
 export const TOGGLE_TODO = "toggle_todo"
+export const INIT_STATE = "init_state"
+
 

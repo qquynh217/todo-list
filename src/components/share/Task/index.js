@@ -4,13 +4,14 @@ import styles from "./Task.module.css"
 import stylesCard from "../card/Card.module.css"
 import { AiFillEdit, AiOutlineClose, AiOutlineUnorderedList, AiOutlineCheck } from "react-icons/ai";
 import { useStore } from '../../store/hook';
-import { editTask, setTaskInput } from '../../store/action';
+import { editTask } from '../../store/action';
 import TodoList from '../TodoList';
 
 function Task(props) {
     const [state, dispatch] = useStore();
-    const { todos, todoInput, taskInput } = state;
+    const { todos, todoInput } = state;
     const [isOpen, setIsOpen] = useState(false)
+    const [taskInput, setTaskInput] = useState("")
     const inputRef = useRef()
     const nameRef = useRef()
     const editBtn = useRef()
@@ -37,7 +38,7 @@ function Task(props) {
                     placeholder={props.nameTask}
                     ref={inputRef}
                     value={taskInput}
-                    onChange={(e) => { dispatch(setTaskInput(e.target.value)) }}
+                    onChange={(e) => { setTaskInput(e.target.value) }}
                 />
                 <Progress
                     format={() => (props.completedTodos + "/" + props.numberOfWork)}

@@ -55,7 +55,10 @@ function reducer(state, action) {
             return {
                 ...state
             }
-
+        case actions.INIT_STATE:
+            return {
+                ...action.payload
+            }
         default:
             break;
     }

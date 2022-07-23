@@ -35,3 +35,7 @@ export const toggleTodo = (indexTodo, indexTask) => ({
     indexTodo,
     indexTask
 })
+export const setInitState = (payload) => ({
+    type: actions.INIT_STATE,
+    payload
+})

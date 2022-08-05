@@ -2,7 +2,7 @@
 
 .task {
     padding: 0 !important;
-    min-width: 300px;
+    width: 300px;
     min-height: 120px;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,11 @@
 .task input {
     /* display: none; */
     margin-bottom: 10px;
+}
+
+.nameTask {
+    width: 100%;
+    overflow-wrap: break-word;
 }
 
 .tools {
@@ -50,6 +55,6 @@
 
 @media only screen and (max-width: 320px) {
     .task {
-        min-width: 100%;
+        width: 100%;
     }
 }

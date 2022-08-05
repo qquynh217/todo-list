@@ -18,13 +18,15 @@ function Task(props) {
     const completedBtn = useRef()
     const toggleEdit = () => {
         inputRef.current.classList.toggle('display')
+        inputRef.current.value = props.nameTask
         nameRef.current.classList.toggle('display')
         editBtn.current.classList.toggle('display')
         completedBtn.current.classList.toggle('display')
         inputRef.current.focus()
     }
     const handleEdit = () => {
-        dispatch(editTask(taskInput, props.index))
+        let prevInput = taskInput || props.nameTask
+        dispatch(editTask(prevInput, props.index))
         toggleEdit()
     }
     return (
